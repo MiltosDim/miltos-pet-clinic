@@ -1,10 +1,10 @@
 package miltos.springframework.miltospetclinic.model;
 
-public class PetType {
+public class PetType extends BaseEntity{
 
     private String name;
 
-    public String getName() {
+    public String getName()  {
         return name;
     }
 
