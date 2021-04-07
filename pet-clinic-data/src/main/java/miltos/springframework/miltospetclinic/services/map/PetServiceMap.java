@@ -2,9 +2,11 @@ package miltos.springframework.miltospetclinic.services.map;
 
 import miltos.springframework.miltospetclinic.model.Pet;
 import miltos.springframework.miltospetclinic.services.PetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
     @Override

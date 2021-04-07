@@ -2,9 +2,11 @@ package miltos.springframework.miltospetclinic.services.map;
 
 import miltos.springframework.miltospetclinic.model.Owner;
 import miltos.springframework.miltospetclinic.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override

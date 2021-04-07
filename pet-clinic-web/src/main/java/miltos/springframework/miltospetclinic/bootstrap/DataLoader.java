@@ -4,9 +4,6 @@ import miltos.springframework.miltospetclinic.model.Owner;
 import miltos.springframework.miltospetclinic.model.Vet;
 import miltos.springframework.miltospetclinic.services.OwnerService;
 import miltos.springframework.miltospetclinic.services.VetService;
-import miltos.springframework.miltospetclinic.services.map.OwnerServiceMap;
-import miltos.springframework.miltospetclinic.services.map.VetServiceMap;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -16,9 +13,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
